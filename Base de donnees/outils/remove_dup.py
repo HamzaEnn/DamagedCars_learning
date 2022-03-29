@@ -1,3 +1,6 @@
+# Programme pour éliminer les doublons en comparant les HashCodes de chacune des images avec les autres
+# et supprimant ainsi les images présents plusieurs fois dans le fichier.
+
 import hashlib
 from imageio import imread
 import cv2
@@ -26,14 +29,6 @@ for index, filename in enumerate(os.listdir('.')):
         else:
             duplicates.append((index,hash_keys[filehash]))
 print(duplicates)
-for file_indexes in duplicates[:30]:
-    try:
-        plt.subplot(121),plt.imshow(imread(files_list[file_indexes[1]]))
-        plt.title(file_indexes[1]),plt.xticks([]),plt.yticks([])
-        plt.subplot(122),plt.imshow(imread(files_list[file_indexes[0]]))
-        plt.title(str(file_indexes[0])+ 'duplicate'),plt.xticks([]),plt.yticks([])
-        plt.show()
-    except OSError as e:
-        continue
+
 for index in duplicates:
     os.remove(files_list[index[0]])
