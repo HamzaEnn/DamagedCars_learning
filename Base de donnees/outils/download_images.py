@@ -1,3 +1,5 @@
+# Code pour télécharger les images depuis le fichier texte urls.txt contenant les liens pris depuis la page de recherche google images.
+
 # import the necessary packages
 from imutils import paths
 import argparse
