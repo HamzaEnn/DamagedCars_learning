@@ -1,3 +1,5 @@
+# Code pour automatiser la renommation des images présent dans le fichier.
+
 import os
 
 folder = r'/home/cross/Hamza/pare-brise/'
