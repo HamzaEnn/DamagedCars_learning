@@ -1,3 +1,5 @@
+// Code pour prendre les urls des images présentes dans la page courante et les stocker dans le fichier urls.txt
+
 /**
  * simulate a right-click event so we can grab the image URL using the
  * context menu alleviating the need to navigate to another page
